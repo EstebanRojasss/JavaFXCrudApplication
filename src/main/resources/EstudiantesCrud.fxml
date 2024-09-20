@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="584.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.EstudiantesController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#cdd6df" height="207.0" layoutX="4.0" layoutY="49.0" stroke="BLACK" strokeType="INSIDE" width="585.0" />
+      <Label layoutX="36.0" layoutY="74.0" text="Nombre" />
+      <Label layoutX="38.0" layoutY="119.0" text="Apellido" />
+      <Label layoutX="35.0" layoutY="164.0" text="Telefono" />
+      <Label layoutX="14.0" layoutY="211.0" text="Numero Matricula" />
+      <TextField fx:id="txtNombre" layoutX="124.0" layoutY="70.0" prefHeight="26.0" prefWidth="426.0" />
+      <TextField fx:id="txtApellido" layoutX="124.0" layoutY="115.0" prefHeight="26.0" prefWidth="426.0" />
+      <TextField fx:id="txtTelefono" layoutX="124.0" layoutY="160.0" prefHeight="26.0" prefWidth="426.0" />
+      <TextField fx:id="txtMatricula" layoutX="124.0" layoutY="207.0" prefHeight="26.0" prefWidth="426.0" />
+      <Label layoutX="252.0" layoutY="14.0" prefHeight="26.0" prefWidth="106.0" text="Estudiante">
+
+         <font>
+            <Font name="Century" size="20.0" />
+         </font>
+      </Label>
+       <Button layoutX="406.0" layoutY="260.0" mnemonicParsing="false" onAction="#actualizarAlumno" prefHeight="26.0" prefWidth="86.0" text="Actualizar" />
+       <Button layoutX="253.0" layoutY="260.0" mnemonicParsing="false" onAction="#guardarAlumno" prefHeight="26.0" prefWidth="86.0" text="Guardar" />
+      <TableView fx:id="tblAlumnos" layoutX="4.0" layoutY="292.0" prefHeight="246.0" prefWidth="586.0">
+        <columns>
+          <TableColumn fx:id="colNombre" prefWidth="160.0" text="Nombre" />
+            <TableColumn fx:id="colApellido" prefWidth="140.79998779296875" text="Apellido" />
+            <TableColumn fx:id="colTelefono" prefWidth="112.0" text="Telefono" />
+            <TableColumn fx:id="colMatricula" prefWidth="165.60003662109375" text="Num_Matricula" />
+        </columns>
+      </TableView>
+
+      <Button layoutX="257.0" layoutY="550.0" mnemonicParsing="false" onAction="#eliminarAlumno" prefHeight="26.0" prefWidth="86.0" text="Eliminar" />
+      <Button layoutX="451.0" layoutY="550.0" mnemonicParsing="false" onAction="#eliminarTodos" prefHeight="26.0" prefWidth="116.0" text="Eliminar TODOS" textFill="#fa0000" />
+   </children>
+</AnchorPane>
